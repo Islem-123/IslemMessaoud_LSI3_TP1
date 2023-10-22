@@ -20,13 +20,8 @@ public class Client {
 			System.out.println("je suis un client connecté");
 		//Récupère un flux d'entrée à partir du socket client. Cela permettra au client d'envoyer des données au serveur
 			InputStream is = client.getInputStream();
-		//Récupère un flux de sortie à partir du socket client. Cela permettra au client d'envoyer des données au serveur
-
-			client.connect(inetSocketAdre);//hetha namlou fih bch nconnectiw ala adresse okhra pc okhra lkdhma hiya nfsha juste socket client hatitha fi comment 
 	
-			System.out.println("je suis un client connecté");
-			//Récupère un flux d'entrée à partir du socket client. Cela permettra au client d'envoyer des données au serveur
-			InputStream is = client.getInputStream();//hachtna bch nbathou lil serveur nb*5 kifh ikoun 
+			
 			//Récupère un flux de sortie à partir du socket client. Cela permettra au client d'envoyer des données au serveur
 
 			OutputStream os = client.getOutputStream();
@@ -46,17 +41,11 @@ public class Client {
 			client.close();
 
 			System.out.println("disconnexion");	
-		} catch (Exception e) {
-			e.printStackTrace();}
-
-			System.out.println("disconnexion");
-			
-		}
+		} 
 		catch (Exception e) {
 			e.printStackTrace();
-		}
+			}}}
 
 		
-	}
-
-
+			
+		
