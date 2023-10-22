@@ -10,7 +10,7 @@ public class Client {
 		try {
 			Socket client = new Socket("localhost",1234);
 			System.out.println("je suis un client connecté");
-			InputStream is = client.getInputStream();//hachtna bch nbathou lil serveur nb*5 kifh ikoun 
+			InputStream is = client.getInputStream();
 			OutputStream os = client.getOutputStream();
 			int nb;
 			System.out.println("nb= ");
@@ -20,7 +20,7 @@ public class Client {
 			os.write(nb);
 			int response =is.read();
 			System.out.println("le nombre est "+response);
-			client.close();//libration de memoire , liberer socket et localhost
+			client.close();//libération de memoire , liberer socket et localhost
 			System.out.println("disconnexion");
 			
 		}

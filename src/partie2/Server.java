@@ -12,8 +12,11 @@ public class Server {
 			System.out.println("le serveur attend la connexion d'un client ");
 			Socket socket = Server.accept();
 			System.out.println("un client est connecté");
-			InputStream is = socket.getInputStream();//hachtna bch nbathou lil serveur nb*5 kifh ikoun 
+			//Récupère un flux d'entrée à partir du socket client (recevoir des données du client)
+			InputStream is = socket.getInputStream();
+			//Récupère un flux de sortie à partir du socket client (envoyer des données au client)
 			OutputStream os = socket.getOutputStream();
+			//traitement
 			int nb = is.read();
 			int resultat = nb*5;
 			os.write(resultat);
@@ -21,13 +24,10 @@ public class Server {
 			socket.close();
 			Server.close();
 			System.out.println("fermeture");
-			
 		}
 		catch(Exception e) 
 		{
-			e.printStackTrace();
-		}
-		}
+			e.printStackTrace();	}}
 }
 
 
