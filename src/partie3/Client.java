@@ -7,31 +7,28 @@ import java.net.Socket;
 import java.util.Scanner;
 public class Client {
 	public static void main(String[]args) {
-<<<<<<< HEAD
+
 		try  {
-=======
-		try 
-		  {
->>>>>>> bfe971a67f15963285a24d825d961657cdfbc179
+
 			//Crée une instance de la classe InetAddress pour représenter l'adresse IP "10.27.15.178"
 			InetAddress inetAdress = InetAddress.getByName("10.27.15.178");
 			InetSocketAddress inetSocketAdre = new InetSocketAddress(inetAdress,1234); 
 			//Crée un socket client.
 			Socket client = new Socket();
-<<<<<<< HEAD
+
 			client.connect(inetSocketAdre);//one le fait pour connecter à une autre adresse de pc
 			System.out.println("je suis un client connecté");
 		//Récupère un flux d'entrée à partir du socket client. Cela permettra au client d'envoyer des données au serveur
 			InputStream is = client.getInputStream();
 		//Récupère un flux de sortie à partir du socket client. Cela permettra au client d'envoyer des données au serveur
-=======
+
 			client.connect(inetSocketAdre);//hetha namlou fih bch nconnectiw ala adresse okhra pc okhra lkdhma hiya nfsha juste socket client hatitha fi comment 
 	
 			System.out.println("je suis un client connecté");
 			//Récupère un flux d'entrée à partir du socket client. Cela permettra au client d'envoyer des données au serveur
 			InputStream is = client.getInputStream();//hachtna bch nbathou lil serveur nb*5 kifh ikoun 
 			//Récupère un flux de sortie à partir du socket client. Cela permettra au client d'envoyer des données au serveur
->>>>>>> bfe971a67f15963285a24d825d961657cdfbc179
+
 			OutputStream os = client.getOutputStream();
 			int nb;
 			System.out.println("nb= ");	
@@ -47,19 +44,19 @@ public class Client {
 			System.out.println("le nombre est "+response);
 			//Ferme le socket client et libère la mémoire
 			client.close();
-<<<<<<< HEAD
+
 			System.out.println("disconnexion");	
 		} catch (Exception e) {
 			e.printStackTrace();}
-=======
+
 			System.out.println("disconnexion");
 			
 		}
 		catch (Exception e) {
 			e.printStackTrace();
 		}
->>>>>>> bfe971a67f15963285a24d825d961657cdfbc179
+
 		
 	}
-}
+
 
